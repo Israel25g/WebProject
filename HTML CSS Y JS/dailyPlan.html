@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daliy Plan</title>
+    <link rel="stylesheet" href="./estilos.css">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo-container">
+            <a href="https://iplgsc.com" target="_blank"><img class="logo" src="/HTML CSS Y JS/media/IPL.png" alt="Logo_IPL_Group" ></a>
+        </div>
+        <h1>Helpdesk</h1>
+        <div class="cuadroFecha">
+            <p id="fecha-actual"></p>
+            <p id="hora-actual"></p>
+        </div>
+    </div>
+    <!-- Fin del Header -->
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar">
+            <ul class="nav" id="detallesOps">
+                <!-- <li class="nav-li"><a href="Index.html">Inicio</a></li> -->
+                <!-- <li class="nav-li"><a href="#">Capacitaciones</a></li> -->
+                <li class="nav-li"><a href="index.html">Helpdesk</a></li>
+                <li class="nav-li"><a class="active" href="dailyPlan.html">Daliy Plan</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Fin Navbar -->
+    
+    <div class="container" id="grid1">
+        <!-- Caja de Import -->
+        <div class="import" id="cajaImport">
+            <div class="tabla" id="tablaImport">
+                <table>
+                    <tr>
+                        <span class="import" id="titTablaImport"><h2>Imports</h2></span>
+                        <th rowspan="2">Cliente</th>
+                        <th colspan="2">En espera</th>
+                    </tr>
+                    <tr>
+                        <td>Contenedores</td>
+                        <td>bultos</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Miniso</td>
+                        <td>4</td>
+                        <td>3</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- Fin de caja de Import -->
+
+        <!-- Caja de Export -->
+        <div class="export" id="cajaExport">
+            <div class="tabla" id="tablaExport">
+                <table>
+                    <tr>
+                        <span class="export" id="titTablaExport"><h2>Exports</h2></span>
+                        <th >Cliente</th>
+                        <th>Meta</th>
+                        <th>Tipo de vehículo</th>
+                        <th>despachado</th>
+                    </tr>
+                    <tr>
+                        <td>Miniso</td>
+                        <td>12</td>
+                        <td>
+                            <form action="">
+                                <input type="radio" id="contenedor" name="tipoVehiculo" value="Contenedor">
+                                <label for="contenedor">Contenedor</label><br>
+                                <input type="radio" id="camion" name="tipoVehiculo" value="Camion">
+                                <label for="camion">Camión</label><br>
+                            </form>
+                        </td>
+                        <td>2</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- Fin de caja de Export -->
+
+        <!-- Caja de Picking -->
+        <div class="picking" id="cajaPicking">
+            <div class="tabla" id="tablaPicking">
+                <table>
+                    <tr>
+                        <span class="picking" id="titTablaPicking"><h2>Picking</h2></span>
+                        <th >Cliente</th>
+                        <th>Unidades por pick</th>
+                        <th>% Avance</th>
+                    </tr>
+                    <tr>
+                        <td>Miniso</td>
+                        <td>12</td>
+                        <td>%20</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- Fin de caja de Picking -->
+        <di class="cajaCumplimiento" >
+            <span><h2 class="porcCump1" id="upper">Porcentaje de</h2></span>
+            <span><h2  class="porcCump2" id="lower">cumplimiento</h2></span>
+            <div class="cumplimientos"id="grid2">
+                <div class="cuadroCumplimiento" id="in">
+                    <div class="dataIn" id="porcIn">
+                        <span class="dataIn">50%</span>
+                        <span class="dataIn"><h4>Import</h4></span>
+                    </div>
+                </div>
+                <div class="cuadroCumplimiento" id="out">
+                    <div class="dataOut" id="porcOut">
+                        <span class="dataOut">50%</span>
+                        <span class="dataIn"><h4>Export</h4></span>
+                    </div>
+                </div>
+                <div class="cuadroCumplimiento" id="pick">
+                    <div class="dataPick" id="porcPick">
+                        <span class="dataPick">50%</span>
+                        <span class="dataIn"><h4>Picking</h4></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin de Caja de cumplimiento -->
+        
+        <!-- Cajita de pruebas-->
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

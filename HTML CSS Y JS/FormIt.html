@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos.css">
+    
+    <title>Soporte de Tecnología</title>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo-container">
+            <a href="https://iplgsc.com" target="_blank"><img class="logo" src="./images/IPL.png" alt="Logo_IPL_Group" ></a>
+        </div>
+        <h1>Soporte de Tecnología</h1>
+        <div class="cuadroFecha">
+            <p id="fecha-actual"></p>
+            <p id="hora-actual">prueba</p>
+        </div>
+    </div>
+    <!-- Fin del Header -->
+    <div class="container-nav">
+    
+    <!-- Navbar -->
+         <div class="navbar">
+             <ul class="nav" id="detallesOps">
+                 <!-- <li class="nav-li"><a href="Index.html">Inicio</a></li> -->
+                 <!-- <li class="nav-li"><a href="#">Capacitaciones</a></li> -->
+                 <li class="nav-li"><a href="index.html">Helpdesk</a></li>
+                 <li class="nav-li"><a class="cierre" href="../CerrarSesion.php">Cerrar Sesión</a></li>
+                 <li class="nav-li"><a class="active" href="#">formularios</a></li>
+                 <li class="nav-li"><a href="dailyPlan.html">Daliy Plan</a></li>
+             </ul>
+         </div>
+     </div>
+    <!-- Fin Navbar -->
+
+    <!-- Links -->
+    <div class="container-descripcion">
+        <div class="bloque-descripcion">
+            <div class="descripcion-texto">
+                <p class="descripcion"><b>Aquí podrás hacer tu solicitud de soporte técnico para mantenimiento, revisión o solución de algún tema dentro del departamento de Tecnología, llena este formulario y en los próximos minutos se estará recibiendo tu respuesta.</b></p>
+            </div>
+        </div>
+    </div>
+    <div class="container-form">
+        <form action="" name="formIt" method="get">
+            <label for="nombre">Nombre y apellido</label>
+            <input type="text" placeholder="nombre" id="nombre" required>
+            <br>
+            <label for="correo">Correo electrónico</label>
+            <input type="email" placeholder="email" id="email" required>
+            <br>
+            <label for="Nivel de urgencia">Nivel de urgencia</label>
+            <select name="urgencia" id="urgencia" required>
+                <option value="" disabled selected>Selecione una opción</option>
+                <option value="bajo">Bajo</option>
+                <option value="medio">Medio</option>
+                <option value="alto">Alto</option>
+            </select>
+            <br>
+            <label for="categoría" required>Categoría</label>
+            <select name="categoria" id="categoria">
+                <option value="" disabled selected>Selecione una opción</option>
+                <option value="redes">Redes</option>
+                <option value="equipos_mant">Equipos (mantenimiento)</option>
+                <option value="equipos_cot">Equipos (cotización)</option>
+                <option value="impresoras">Impresoras</option>
+                <option value="PDT">PDT</option>
+                <option value="Otros">Otros</option>
+            </select>
+            <br>
+            <label for="departamento" required>Departamento</label>
+            <select name="departamento" id="departamento">
+                <option value="" disabled selected>Selecione una opción</option>
+                <option value="auditoría">Auditoría</option>
+                <option value="contabilidad">Contabilidad</option>
+                <option value="gerencia">Gerencia</option>
+                <option value="inventario">Inventario</option>
+                <option value="mantenimiento">Mantenimiento</option>
+                <option value="operaciones">Operaciones</option>
+                <option value="RRHH">Recursos Humanos</option>
+                <option value="tráfico">Tráfico (SAC)</option>
+                <option value="inventario">Inventario</option>
+            </select>
+            <br>
+            <label for="descripcion" required>Descripción del problema:</label>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Describa su problemática lo más detallado posible"></textarea>
+            <br>
+            <input type="submit" id="btn">
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
